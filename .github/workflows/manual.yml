@@ -20,9 +20,9 @@ jobs:
       with:
         # optional: set the branch to checkout,
         # sync action checks out your 'target_sync_branch' anyway
-        ref:  main
+        # ref:  main
         # REQUIRED if your upstream repo is private (see wiki)
-        persist-credentials: false
+        # persist-credentials: false
 
     # REQUIRED step
     # Step 2: run the sync action
@@ -31,7 +31,7 @@ jobs:
       uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
       with:
         target_sync_branch: main
-        target_repo_token: ${{ secrets.TOKEN }}
+        target_repo_token: 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
         upstream_sync_branch: main
         upstream_sync_repo: Bhuvnquo/visits-counter-docker
         # upstream_repo_access_token: ${{ secrets.UPSTREAM_REPO_SECRET }}
