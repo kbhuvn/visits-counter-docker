@@ -1,0 +1,24 @@
+name: Sync to Upstream
+
+on:
+  schedule:
+    - cron:  '*/50 * * * *'
+    # scheduled every 5 min
+  workflow_dispatch:
+
+jobs:
+  sync_with_upstream:
+    runs-on: ubuntu-latest
+    name: Sync HEAD with upstream latest
+    
+    steps:
+    # Step 1: run a standard checkout action, provided by github
+    - uses: actions/checkout@v2
+    - name: Sync and merge upstream repository with your current repository
+      uses: dabreadman/sync-upstream-repo@v1.3.0
+      with:
+        upstream_repo: https://github.com/Bhuvnquo/visits-counter-docker
+        upstream_branch: main
+        downstream_branch: main
+        token: ${{ secrets.GITHUB_TOKEN }}
+
