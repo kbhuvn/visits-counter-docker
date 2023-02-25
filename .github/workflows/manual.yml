@@ -7,12 +7,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  sync_with_upstream:
-    runs-on: ubuntu-latest
-    name: Sync HEAD with upstream latest
-    
+  sync:
+    runs-on: ubuntu-latest    
     steps:
-    # Step 1: run a standard checkout action, provided by github
     - uses: actions/checkout@v2
     - name: Sync and merge upstream repository with your current repository
       uses: dabreadman/sync-upstream-repo@v1.3.0
@@ -20,5 +17,5 @@ jobs:
         upstream_repo: https://github.com/Bhuvnquo/visits-counter-docker
         upstream_branch: main
         downstream_branch: main
-        token: ${{ secrets.TOKEN }}
+        token: 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
 
