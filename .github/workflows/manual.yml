@@ -24,4 +24,7 @@ jobs:
         upstream_repository: Bhuvnquo/visits-counter-docker
         upstream_branch: main
         target_branch: main                       # optional
+        # merge_method: 
+        git_config_pull_rebase: false
+        # upstream_pull_args: --ff-only
         github_token: ${{ secrets.TOKEN }}   # optional, for accessing repos that require authentication
