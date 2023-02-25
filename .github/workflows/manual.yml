@@ -20,5 +20,5 @@ jobs:
         upstream_repo: https://github.com/Bhuvnquo/visits-counter-docker
         upstream_branch: main
         downstream_branch: main
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.TOKEN }}
 
