@@ -31,7 +31,7 @@ jobs:
       uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
       with:
         target_sync_branch: main
-        target_repo_token: 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
+        target_repo_token: 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
         upstream_sync_branch: main
         upstream_sync_repo: Bhuvnquo/visits-counter-docker
         # upstream_repo_access_token: ${{ secrets.UPSTREAM_REPO_SECRET }}
